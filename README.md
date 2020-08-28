@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Toke 
 
-## Available Scripts
+## Product
 
-In the project directory, you can run:
+//TODO
 
-### `npm start`
+#### Recorded Presentation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+//TODO
+#### Slides Presentation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+//TODO 
 
-### `npm test`
+**Current Limitations**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The marketplace is not currently setup on the webapp but works with contracts
+- The list of ids in a collection is not accurate as there can be duplicate ids
+- The security of the contracts has not been checked, the list functions are present to simplify the flow 
+- Data are retrieve through transaction at the moment to ease the implementation, it should be move to event listening
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Ameliorations possible**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- TODO
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technical
 
-### `npm run eject`
+### Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+** Pre-requisites ** 
+1. Having the Flow CLI, VS Code extension, dev-wallet, npm installed
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository to your local folder
+2. Open VS Code at the root folder
+3. Start the emulator
+4. Deploy contracts 1 to 5 as per the file name
+5. With the command line on the root folder, type ```npm run dev:wallet```
+6. In another command line window, on the root folder type ```npm start```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Et voilà the page should be popping up anytime soon.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Walthrough
 
-## Learn More
+1. click login to register an account
+2. Setup the admin account 
+3. Go to the admin dashboard to create deck, then memento, and finally assign the memento to a deck
+4. logout and create another account
+5. Setup the customer account
+6. Go to the marketplace and follow the other account using the provided address
+7. Write down your current address, you will need it 
+8. Login again to the admin account and go to the admin dashboard
+9. Send a NFT to the other account, using the address previously noted
+10. Login to the customer account and go to the marketplace
+11. Check that the NFT is here and that you can check how many fan points it gave
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
