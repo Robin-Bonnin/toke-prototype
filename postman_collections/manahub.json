@@ -1,0 +1,2452 @@
+{
+	"info": {
+		"_postman_id": "02290d78-7d96-4d7d-9878-a83aa0ca5e7a",
+		"name": "manahub",
+		"description": "# Introduction\nIntegration marketplace for Manatal\n# Overview\nMade with love by Robin\n# Authentication\nManatal token\n# Error Codes\nYou'd better not make any mistake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assessment",
+			"item": [
+				{
+					"name": "list assessment",
+					"_postman_id": "b1bb6699-20f7-4f3e-8214-f64b2a342bca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/client-integrations/27/actions/list_assessment/"
+					},
+					"response": [
+						{
+							"id": "3a21fdd7-9af4-481d-8ce2-40c75f3a1ae8",
+							"name": "list assessment action",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/actions/list_assessment/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:32:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "778"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"count\": 12,\n    \"previous\": null,\n    \"next\": null,\n    \"results\": [\n        {\n            \"name\": \"Python Developer with Django\",\n            \"id\": \"9343\"\n        },\n        {\n            \"name\": \"Python Developer with Django 2\",\n            \"id\": \"9344\"\n        },\n        {\n            \"name\": \"Backend Developer, Language-agnostic\",\n            \"id\": \"9345\"\n        },\n        {\n            \"name\": \"Backend Developer, Language-agnostic\",\n            \"id\": \"9349\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy)\",\n            \"id\": \"9350\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy)\",\n            \"id\": \"9351\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy) (copy)\",\n            \"id\": \"9352\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy)\",\n            \"id\": \"9353\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy)\",\n            \"id\": \"9356\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy) (copy)\",\n            \"id\": \"9357\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy) (copy) (copy)\",\n            \"id\": \"9358\"\n        },\n        {\n            \"name\": \"Python Developer with Django (copy)\",\n            \"id\": \"9359\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "assessment request",
+					"_postman_id": "805a8949-53fb-4788-805b-7fc0137f787c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"test_id\": \"9345\",\n    \"test_name\": \"Backend Developer, Language-agnostic\",\n    \"email\": {\n        \"subject\": \"{{$randomLoremWords}}\",\n        \"text\": \"{{$randomLoremParagraph}} {{test_link}}\",\n        \"reply_to\": \"robin.bonnin@manatal.com\"\n    },\n    \"candidates\": [\n        {\n            \"email\": \"robin.bonnin@gmail.com\",\n            \"id\": 25954,\n            \"match_id\": 5763\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations//{{assessment_integration_id}}/actions/request_code_assessment/"
+					},
+					"response": [
+						{
+							"id": "61c1796f-dc4d-409f-9029-3107e781e6e7",
+							"name": "assessment request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"test_id\": \"9345\",\n    \"test_name\": \"Backend Developer, Language-agnostic\",\n    \"email\": {\n        \"subject\": \"{{$randomLoremWords}}\",\n        \"text\": \"{{$randomLoremParagraph}} [PRIVATE_TEST_LINK]\",\n        \"reply_to\": \"robin.bonnin@manatal.com\"\n    },\n    \"candidates\": [\n        {\n            \"email\": \"velorobin@gmail.com\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        },\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"id\": 12706\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/actions/request_code_assessment/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 09:05:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"assessment_sent\": 7\n}"
+						}
+					]
+				},
+				{
+					"name": "Get job assessment results",
+					"_postman_id": "679aa79c-ca4c-4edd-a3f9-83887674ca8f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://codility.com/api/sessions/KKUFDG-5V5/\",\n        \"candidate\": null,\n        \"first_name\": \"Robert\",\n        \"last_name\": \"Lewandowski\",\n        \"email\": \"robert.lewandowski@example.com\",\n        \"create_date\": null,\n        \"start_date\": null,\n        \"campaign_url\": \"https://codility.com/api/tests/37087736411/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"tasks\": [\n                {\n                    \"task_name\": \"AbsDistinct\",\n                    \"result\": null,\n                    \"max_result\": 100,\n                    \"prg_lang\": null,\n                    \"name\": \"abs_distinct\"\n                }\n            ],\n            \"max_result\": 100,\n            \"result\": 99\n        },\n        \"report_link\": \"https://app.codility.com/tickets/KKUFDG-5V5/\",\n        \"pdf_report_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/pdf/\",\n        \"feedback_link\": null,\n        \"cancel_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/cancel/\",\n        \"start_codelive_url\": null,\n        \"test_link\": \"https://app.codility.com/test/KKUFDG-5V5\",\n        \"candidate_data\": {\n            \"field_of_study\": null,\n            \"school\": null,\n            \"academic_degree\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\"manatal_assessment_result_id\":12}\n        },\n        \"reviews\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{manatal_url}}/api/v1.0/jobs/76663/assessment-results/?candidate_id=904576",
+							"host": [
+								"{{manatal_url}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"jobs",
+								"76663",
+								"assessment-results",
+								""
+							],
+							"query": [
+								{
+									"key": "candidate_id",
+									"value": "904576"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "bbb67294-6d93-46f1-8716-335ebf1f7313",
+							"name": "Get job assessment results",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manatal_url}}/api/v1.0/jobs/56337/assessment-results/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 24 Mar 2022 11:12:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Accept-Language, Cookie, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14376"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 3,\n        \"match\": {\n            \"id\": 498430,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922352,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": null,\n        \"assessment_link\": null,\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922352,\n        \"created_at\": \"2022-03-09T06:35:48.672442Z\",\n        \"updated_at\": \"2022-03-09T06:35:48.672471Z\"\n    },\n    {\n        \"id\": 4,\n        \"match\": {\n            \"id\": 498430,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922352,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": 1231,\n        \"score_max\": 3131,\n        \"assessment_name\": null,\n        \"assessment_link\": \"https://google.com\",\n        \"assessment_id\": \"Hello this is new 3\",\n        \"status\": \"done\",\n        \"result_date\": \"2022-03-09T06:36:07Z\",\n        \"assessment_report_link\": null,\n        \"candidate\": 922352,\n        \"created_at\": \"2022-03-09T06:36:20.330005Z\",\n        \"updated_at\": \"2022-03-09T06:36:20.330026Z\"\n    },\n    {\n        \"id\": 5,\n        \"match\": {\n            \"id\": 498430,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922352,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": 1231,\n        \"score_max\": 3131,\n        \"assessment_name\": null,\n        \"assessment_link\": \"https://google.com\",\n        \"assessment_id\": null,\n        \"status\": \"done\",\n        \"result_date\": \"2022-03-09T06:36:07Z\",\n        \"assessment_report_link\": null,\n        \"candidate\": 922352,\n        \"created_at\": \"2022-03-14T05:03:36.914455Z\",\n        \"updated_at\": \"2022-03-14T05:03:36.914480Z\"\n    },\n    {\n        \"id\": 6,\n        \"match\": {\n            \"id\": 498430,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922352,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": 1231,\n        \"score_max\": 3131,\n        \"assessment_name\": null,\n        \"assessment_link\": \"https://google.com\",\n        \"assessment_id\": null,\n        \"status\": \"done\",\n        \"result_date\": \"2022-03-09T06:36:07Z\",\n        \"assessment_report_link\": null,\n        \"candidate\": 922352,\n        \"created_at\": \"2022-03-14T05:03:43.108740Z\",\n        \"updated_at\": \"2022-03-14T05:03:43.108767Z\"\n    },\n    {\n        \"id\": 7,\n        \"match\": {\n            \"id\": 498430,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922352,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": 1231,\n        \"score_max\": 3131,\n        \"assessment_name\": null,\n        \"assessment_link\": \"https://google.com\",\n        \"assessment_id\": null,\n        \"status\": \"done\",\n        \"result_date\": \"2022-03-09T06:36:07Z\",\n        \"assessment_report_link\": null,\n        \"candidate\": 922352,\n        \"created_at\": \"2022-03-14T07:47:23.480399Z\",\n        \"updated_at\": \"2022-03-14T07:47:23.503061Z\"\n    },\n    {\n        \"id\": 9,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": 1231,\n        \"score_max\": 3131,\n        \"assessment_name\": null,\n        \"assessment_link\": \"https://google.com\",\n        \"assessment_id\": null,\n        \"status\": \"done\",\n        \"result_date\": \"2022-03-09T06:36:07Z\",\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-14T07:57:30.954749Z\",\n        \"updated_at\": \"2022-03-14T07:57:30.959268Z\"\n    },\n    {\n        \"id\": 28,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Hello\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/BB6WTC-55U/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-14T10:03:20.028954Z\",\n        \"updated_at\": \"2022-03-14T10:03:24.840639Z\"\n    },\n    {\n        \"id\": 30,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/B4A7YK-842/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:00:10.739311Z\",\n        \"updated_at\": \"2022-03-15T04:00:13.243729Z\"\n    },\n    {\n        \"id\": 32,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/NPZX9J-F8F/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:01:00.897057Z\",\n        \"updated_at\": \"2022-03-15T04:01:03.096788Z\"\n    },\n    {\n        \"id\": 34,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/XAUDNR-R4G/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:01:31.593640Z\",\n        \"updated_at\": \"2022-03-15T04:01:33.510966Z\"\n    },\n    {\n        \"id\": 36,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/JGX7KT-MRN/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:03:39.681450Z\",\n        \"updated_at\": \"2022-03-15T04:03:41.467965Z\"\n    },\n    {\n        \"id\": 38,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/AYKZMZ-K4H/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:16:43.526409Z\",\n        \"updated_at\": \"2022-03-15T04:16:48.539767Z\"\n    },\n    {\n        \"id\": 40,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/ERQCJS-VAV/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:20:15.233448Z\",\n        \"updated_at\": \"2022-03-15T04:20:19.321537Z\"\n    },\n    {\n        \"id\": 42,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": null,\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:55:08.356528Z\",\n        \"updated_at\": \"2022-03-15T04:55:08.359655Z\"\n    },\n    {\n        \"id\": 44,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": null,\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:56:10.549224Z\",\n        \"updated_at\": \"2022-03-15T04:56:10.552775Z\"\n    },\n    {\n        \"id\": 46,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": null,\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:56:38.894496Z\",\n        \"updated_at\": \"2022-03-15T04:56:38.897969Z\"\n    },\n    {\n        \"id\": 47,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/XATTHQ-YGJ/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T04:56:43.138944Z\",\n        \"updated_at\": \"2022-03-15T04:56:45.184895Z\"\n    },\n    {\n        \"id\": 49,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/ZWBBTK-G7B/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T06:49:16.537513Z\",\n        \"updated_at\": \"2022-03-15T06:49:18.653674Z\"\n    },\n    {\n        \"id\": 51,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/YVPQ3V-4QY/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T06:49:39.586697Z\",\n        \"updated_at\": \"2022-03-15T06:49:41.730971Z\"\n    },\n    {\n        \"id\": 53,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/8RTQ3V-YR5/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T06:50:23.720833Z\",\n        \"updated_at\": \"2022-03-15T06:50:25.760660Z\"\n    },\n    {\n        \"id\": 55,\n        \"match\": {\n            \"id\": 498427,\n            \"job\": {\n                \"id\": 56337,\n                \"position_name\": \"General Manager & Happinness officer\"\n            },\n            \"organization\": {\n                \"id\": 32297,\n                \"name\": \"ADD\",\n                \"logo\": \"http://127.0.0.1:8000/media/organization_logo/Screen_Shot_2020-06-30_at_8.56.29_AM.png\"\n            },\n            \"candidate\": {\n                \"id\": 922349,\n                \"full_name\": \"ewsoptkrfeop\",\n                \"picture\": null\n            },\n            \"stage\": \"Former Employee\"\n        },\n        \"assessment_type\": null,\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Python Developer with Django\",\n        \"assessment_link\": \"https://staging.codility.net/api/sessions/6NSDTD-5XY/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 922349,\n        \"created_at\": \"2022-03-15T08:37:12.177994Z\",\n        \"updated_at\": \"2022-03-15T08:37:14.369650Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Save assessment result",
+					"_postman_id": "2b1acfe5-06c8-496e-b250-2f99fbe45248",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Checksum",
+								"value": "94c0c56ed081d1e88e1657ceb5083e21",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://staging.codility.net/api/sessions/S6PBSU-DPA/\",\n        \"id\": \"S6PBSU-DPA\",\n        \"candidate\": \"922340\",\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"email\": \"robin.bonnin@gmail.com\",\n        \"create_date\": \"2022-03-21T03:50:34Z\",\n        \"start_date\": \"2022-03-21T03:50:54Z\",\n        \"close_date\": \"2022-03-21T03:57:00Z\",\n        \"campaign_url\": \"https://staging.codility.net/api/tests/9345/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"result\": 100,\n            \"max_result\": 100,\n            \"tasks\": [\n                {\n                    \"task_name\": \"BugfixingConsecutiveIntegers\",\n                    \"result\": 100,\n                    \"max_result\": 100,\n                    \"prg_lang\": \"Python\",\n                    \"name\": \"bugfixing_consecutive_integers\"\n                }\n            ]\n        },\n        \"reviews\": [],\n        \"report_link\": \"https://staging-app.codility.net/tickets/S6PBSU-DPA/\",\n        \"pdf_report_url\": \"https://staging.codility.net/api/sessions/S6PBSU-DPA/pdf/\",\n        \"feedback_link\": \"https://staging-app.codility.net/c/feedback/S6PBSU-DPA/\",\n        \"cancel_url\": null,\n        \"test_link\": \"https://staging-app.codility.net/test/S6PBSU-DPA/\",\n        \"candidate_data\": {\n            \"school\": null,\n            \"academic_degree\": null,\n            \"field_of_study\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\n                \"match_id\": null,\n                \"manatal_assessment_result_id\": 13\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations//{{assessment_integration_id}}/webhooks/save_assessment_result/"
+					},
+					"response": [
+						{
+							"id": "1812ca5b-da97-4a77-b983-c2608a46d3d5",
+							"name": "Save assessment result",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://codility.com/api/sessions/KKUFDG-5V5/\",\n        \"candidate\": null,\n        \"first_name\": \"Robert\",\n        \"last_name\": \"Lewandowski\",\n        \"email\": \"robert.lewandowski@example.com\",\n        \"create_date\": null,\n        \"start_date\": null,\n        \"campaign_url\": \"https://codility.com/api/tests/37087736411/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"tasks\": [\n                {\n                    \"task_name\": \"AbsDistinct\",\n                    \"result\": null,\n                    \"max_result\": 100,\n                    \"prg_lang\": null,\n                    \"name\": \"abs_distinct\"\n                }\n            ],\n            \"max_result\": 100,\n            \"result\": 99\n        },\n        \"report_link\": \"https://app.codility.com/tickets/KKUFDG-5V5/\",\n        \"pdf_report_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/pdf/\",\n        \"feedback_link\": null,\n        \"cancel_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/cancel/\",\n        \"start_codelive_url\": null,\n        \"test_link\": \"https://app.codility.com/test/KKUFDG-5V5\",\n        \"candidate_data\": {\n            \"field_of_study\": null,\n            \"school\": null,\n            \"academic_degree\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\"manatal_assessment_result_id\":12}\n        },\n        \"reviews\": []\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/webhooks/save_assessment_result/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 09:05:08 GMT"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get candidate assessment results",
+					"_postman_id": "1570d172-cf15-4069-8dc6-9c0a551cdbc0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://codility.com/api/sessions/KKUFDG-5V5/\",\n        \"candidate\": null,\n        \"first_name\": \"Robert\",\n        \"last_name\": \"Lewandowski\",\n        \"email\": \"robert.lewandowski@example.com\",\n        \"create_date\": null,\n        \"start_date\": null,\n        \"campaign_url\": \"https://codility.com/api/tests/37087736411/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"tasks\": [\n                {\n                    \"task_name\": \"AbsDistinct\",\n                    \"result\": null,\n                    \"max_result\": 100,\n                    \"prg_lang\": null,\n                    \"name\": \"abs_distinct\"\n                }\n            ],\n            \"max_result\": 100,\n            \"result\": 99\n        },\n        \"report_link\": \"https://app.codility.com/tickets/KKUFDG-5V5/\",\n        \"pdf_report_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/pdf/\",\n        \"feedback_link\": null,\n        \"cancel_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/cancel/\",\n        \"start_codelive_url\": null,\n        \"test_link\": \"https://app.codility.com/test/KKUFDG-5V5\",\n        \"candidate_data\": {\n            \"field_of_study\": null,\n            \"school\": null,\n            \"academic_degree\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\"manatal_assessment_result_id\":12}\n        },\n        \"reviews\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{manatal_url}}/api/v1.0/candidates/912477/assessment-results/?match__job_id=76663",
+							"host": [
+								"{{manatal_url}}"
+							],
+							"path": [
+								"api",
+								"v1.0",
+								"candidates",
+								"912477",
+								"assessment-results",
+								""
+							],
+							"query": [
+								{
+									"key": "match__job_id",
+									"value": "76663"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "e67b52a1-2f91-45fb-9707-350b09130f41",
+							"name": "Get candidate assessment results",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{manatal_url}}/api/v1.0/candidates/912477/assessment-results/?match__job_id=76663",
+									"host": [
+										"{{manatal_url}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"candidates",
+										"912477",
+										"assessment-results",
+										""
+									],
+									"query": [
+										{
+											"key": "match__job_id",
+											"value": "76663"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 08:32:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Accept-Language, Cookie, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1313"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 20,\n        \"match\": {\n            \"id\": 498415,\n            \"job\": {\n                \"id\": 76663,\n                \"position_name\": \"Cybersecurity Analyst\"\n            },\n            \"organization\": {\n                \"id\": 81860,\n                \"name\": \"SECTOR AUTOMOVILISTICO\",\n                \"logo\": null\n            },\n            \"candidate\": {\n                \"id\": 912477,\n                \"full_name\": \"Enrique Rodriguez Toscano\",\n                \"picture\": null\n            },\n            \"stage\": \"New Candidates\"\n        },\n        \"assessment_type\": \"Code assessment\",\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Backend Developer, Language-agnostic\",\n        \"assessment_link\": \"https://staging-app.codility.net/test/8B6YZJ-UKB/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 912477,\n        \"created_at\": \"2022-04-01T08:26:44.776213Z\",\n        \"updated_at\": \"2022-04-01T08:27:55.481254Z\"\n    },\n    {\n        \"id\": 19,\n        \"match\": {\n            \"id\": 498415,\n            \"job\": {\n                \"id\": 76663,\n                \"position_name\": \"Cybersecurity Analyst\"\n            },\n            \"organization\": {\n                \"id\": 81860,\n                \"name\": \"SECTOR AUTOMOVILISTICO\",\n                \"logo\": null\n            },\n            \"candidate\": {\n                \"id\": 912477,\n                \"full_name\": \"Enrique Rodriguez Toscano\",\n                \"picture\": null\n            },\n            \"stage\": \"New Candidates\"\n        },\n        \"assessment_type\": \"Code assessment\",\n        \"score\": null,\n        \"score_max\": null,\n        \"assessment_name\": \"Backend Developer, Language-agnostic\",\n        \"assessment_link\": \"https://staging-app.codility.net/test/Z62NN5-CQQ/\",\n        \"assessment_id\": null,\n        \"status\": \"pending\",\n        \"result_date\": null,\n        \"assessment_report_link\": null,\n        \"candidate\": 912477,\n        \"created_at\": \"2022-04-01T08:26:41.651562Z\",\n        \"updated_at\": \"2022-04-01T08:28:02.795013Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get job filter for candidate",
+					"_postman_id": "423ed7b9-ea13-4686-896f-90b32225342c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://codility.com/api/sessions/KKUFDG-5V5/\",\n        \"candidate\": null,\n        \"first_name\": \"Robert\",\n        \"last_name\": \"Lewandowski\",\n        \"email\": \"robert.lewandowski@example.com\",\n        \"create_date\": null,\n        \"start_date\": null,\n        \"campaign_url\": \"https://codility.com/api/tests/37087736411/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"tasks\": [\n                {\n                    \"task_name\": \"AbsDistinct\",\n                    \"result\": null,\n                    \"max_result\": 100,\n                    \"prg_lang\": null,\n                    \"name\": \"abs_distinct\"\n                }\n            ],\n            \"max_result\": 100,\n            \"result\": 99\n        },\n        \"report_link\": \"https://app.codility.com/tickets/KKUFDG-5V5/\",\n        \"pdf_report_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/pdf/\",\n        \"feedback_link\": null,\n        \"cancel_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/cancel/\",\n        \"start_codelive_url\": null,\n        \"test_link\": \"https://app.codility.com/test/KKUFDG-5V5\",\n        \"candidate_data\": {\n            \"field_of_study\": null,\n            \"school\": null,\n            \"academic_degree\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\"manatal_assessment_result_id\":12}\n        },\n        \"reviews\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manatal_url}}/api/v1.0/candidates/904576/assessment-results/jobs/"
+					},
+					"response": [
+						{
+							"id": "00586c40-c0ec-45c5-8ca5-41c33cfc92cc",
+							"name": "Get match filter for candidate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manatal_url}}/api/v1.0/candidates/904576/assessment-results/jobs/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 08:37:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Accept-Language, Cookie, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 76663,\n        \"position_name\": \"Cybersecurity Analyst\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get candidate filter for job",
+					"_postman_id": "a3293b4e-ec5e-40eb-8cfa-5672abf13fbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"result\",\n    \"session\": {\n        \"url\": \"https://codility.com/api/sessions/KKUFDG-5V5/\",\n        \"candidate\": null,\n        \"first_name\": \"Robert\",\n        \"last_name\": \"Lewandowski\",\n        \"email\": \"robert.lewandowski@example.com\",\n        \"create_date\": null,\n        \"start_date\": null,\n        \"campaign_url\": \"https://codility.com/api/tests/37087736411/\",\n        \"similarity\": null,\n        \"evaluation\": {\n            \"tasks\": [\n                {\n                    \"task_name\": \"AbsDistinct\",\n                    \"result\": null,\n                    \"max_result\": 100,\n                    \"prg_lang\": null,\n                    \"name\": \"abs_distinct\"\n                }\n            ],\n            \"max_result\": 100,\n            \"result\": 99\n        },\n        \"report_link\": \"https://app.codility.com/tickets/KKUFDG-5V5/\",\n        \"pdf_report_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/pdf/\",\n        \"feedback_link\": null,\n        \"cancel_url\": \"https://codility.com/api/sessions/KKUFDG-5V5/cancel/\",\n        \"start_codelive_url\": null,\n        \"test_link\": \"https://app.codility.com/test/KKUFDG-5V5\",\n        \"candidate_data\": {\n            \"field_of_study\": null,\n            \"school\": null,\n            \"academic_degree\": null,\n            \"programming_experience\": null,\n            \"profile_url\": null,\n            \"additional_data\": {\"manatal_assessment_result_id\":12}\n        },\n        \"reviews\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manatal_url}}/api/v1.0/jobs/76663/assessment-results/candidates/"
+					},
+					"response": [
+						{
+							"id": "208fd451-978a-43e2-a632-130f1b083657",
+							"name": "Get match filter for job",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manatal_url}}/api/v1.0/jobs/76663/assessment-results/candidates/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 08:29:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.6.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Accept-Language, Cookie, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "125"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 904576,\n        \"full_name\": \"Oscar Lango\",\n        \"picture\": null\n    },\n    {\n        \"id\": 912477,\n        \"full_name\": \"Enrique Rodriguez Toscano\",\n        \"picture\": null\n    }\n]"
+						}
+					]
+				}
+			],
+			"_postman_id": "ead0aa66-fea7-4da9-a4b2-1bc726256da5"
+		},
+		{
+			"name": "Emailing",
+			"item": [
+				{
+					"name": "Webhooks",
+					"item": [
+						{
+							"name": "Webhook test",
+							"_postman_id": "c77b01b6-7779-41c4-b006-bc0bf876d786",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/29/actions/get_batch_operation_results/"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "2d0382ac-525c-482b-b248-90c20847e278",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "list contact lists",
+					"_postman_id": "252d45e9-e8c5-4f84-a224-36603500acd1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/client-integrations/30/actions/get_contacts_lists/"
+					},
+					"response": [
+						{
+							"id": "e8c2d24f-f106-49da-a830-ef82c05cebaf",
+							"name": "list contact lists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/29/actions/get_contacts_lists/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 02:36:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"count\": null,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"e392655ea9\",\n            \"name\": \"RobinNew\",\n            \"nb_members\": 7\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add contacts to list and create list",
+					"_postman_id": "90f8c5a5-2369-44d6-b5af-36e83a10946a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"new_list_name\": \"New\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n        {\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"new_list_defaults_from_name\": \"robin\",\n    \"new_list_defaults_from_email\": \"robin.bonnin@gmail.com\",\n    \"new_list_name_contact_zip\": \"234235\",\n    \"new_list_name_contact_state\": \"NY\",\n    \"from_name\": \"robin\",\n    \"from_email\": \"robin.bonnin@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/{{emailing_integration_id}}/actions/add_contacts_to_list/"
+					},
+					"response": [
+						{
+							"id": "47e74d72-33e0-483d-bcb8-c65d82b64cc3",
+							"name": "Creation successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"new_list_name\": \"faw\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n        {\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"new_list_defaults_from_name\": \"robin\",\n    \"new_list_defaults_from_email\": \"robin.bonnin@gmail.com\",\n    \"new_list_name_contact_zip\": \"234235\",\n    \"new_list_name_contact_state\": \"NY\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/30/actions/add_contacts_to_list/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 31 May 2022 12:57:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"e0a9c886ca\",\n    \"name\": \"faw\",\n    \"nb_members\": 0\n}"
+						},
+						{
+							"id": "91093141-68cf-41fa-ad05-fe6109a78dd5",
+							"name": "API error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"list_name\": \"pipi\",\n    \"new_members\": [\n        {\n            \"email\": \"vite.fait@gmail.com\",\n            \"full_name\": \"Robin Bannin\"\n        },\n        {\n            \"email\": \"bien.fait@gmail.com\",\n            \"full_name\": \"Jean Laporte\"\n        }\n    ],\n    \"from_name\": \"robin\",\n    \"from_email\": \"robin.bonnin@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/29/actions/add_contacts_to_list/"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 02:36:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"Mailchimp Error\": [\n        \"No permission to perform this action.\\nPossible issues:\\n- Please, check if you have hit your audience limits in Mailchimp.https://us10.admin.mailchimp.com/lists/\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add contacts to list",
+					"_postman_id": "522cdfea-8efc-420f-9d4f-b9ecec9dd5d0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"list_id\": \"e0a9c886ca\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n         {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"from_name\": \"robin\",\n    \"from_email\": \"robin.bonnin@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/{{emailing_integration_id}}/actions/add_contacts_to_list/"
+					},
+					"response": [
+						{
+							"id": "62a9eb2d-8262-454c-b081-0aa4888ed745",
+							"name": "Add contacts to list",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"list_id\": \"e392655ea9\",\n    \"new_members\": [\n        {\n            \"email\": \"jacky.tuning@gmail.com\",\n            \"full_name\": \"Robin Bannin\"\n        },\n        {\n            \"email\": \"jean.robespierre@gmail.com\",\n            \"full_name\": \"Jean Laporte\"\n        }\n    ],\n    \"from_name\": \"robin\",\n    \"from_email\": \"robin.bonnin@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/29/actions/add_contacts_to_list/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 02:37:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"e392655ea9\",\n    \"name\": \"\",\n    \"nb_members\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get extra fields",
+					"_postman_id": "79288c8b-7f4c-4ab6-9d52-a0f82dcca909",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/{{emailing_integration_id}}/actions/get_extra_fields/"
+					},
+					"response": [
+						{
+							"id": "d27b5f19-278d-4a94-96c6-a325b672f67d",
+							"name": "Get extra fields",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"list_id\": \"e392655ea9\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n         {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"from_name\": \"robin\",\n    \"from_email\": \"robin.bonnin@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/30/actions/get_extra_fields/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 11:09:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "413"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"fields\": [\n        {\n            \"name\": \"permission_reminder\",\n            \"display_name\": \"Remind people how the signed up to your audience\",\n            \"format\": \"string\",\n            \"example\": \"You joined this mass mailing by subscription to our newsletter\"\n        },\n        {\n            \"name\": \"from_name\",\n            \"display_name\": \"Default From name\",\n            \"format\": \"string\",\n            \"example\": \"John Doe\"\n        },\n        {\n            \"name\": \"from_email\",\n            \"display_name\": \"Default From email address\",\n            \"format\": \"string\",\n            \"example\": \"johndoe@example.com\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "ee93ca2a-4c52-43c7-b925-00643e70c285"
+		},
+		{
+			"name": "Integration management",
+			"item": [
+				{
+					"name": "Integrations categories",
+					"_postman_id": "eb1c4f24-0468-41b2-b175-911948f8528c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/integrations/categories/"
+					},
+					"response": [
+						{
+							"id": "e4676739-ffbd-4a10-9aff-180babd9451c",
+							"name": "Integrations categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/integrations/categories/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Mar 2022 08:02:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"slug\": \"assessment\",\n        \"display\": \"Assessment\"\n    },\n    {\n        \"slug\": \"marketing\",\n        \"display\": \"Marketing\"\n    },\n    {\n        \"slug\": \"emailing\",\n        \"display\": \"Emailing\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Integrations",
+					"_postman_id": "b089842c-abc0-48f2-87d3-046863fb3a7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/integrations/"
+					},
+					"response": [
+						{
+							"id": "f56456af-17d9-49d9-8538-f4f08dc3ae6c",
+							"name": "Integrations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/integrations/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:31:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3376"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"name\": \"Codility\",\n            \"status\": \"active\",\n            \"short_description\": \"Codility is the #1 rated technical recruitment platform for teams to test the coding skills of developers and make evidence-based hiring decisions.\",\n            \"description\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n            \"instructions\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n            \"logo\": null,\n            \"cover_logo\": null,\n            \"url\": \"https://support.codility.com/\",\n            \"terms_conditions_url\": \"https://support.codility.com/\",\n            \"privacy_policy_url\": \"https://support.codility.com/\",\n            \"categories\": [\n                \"assessment\"\n            ],\n            \"created_at\": \"2022-03-03T10:10:56.299224Z\",\n            \"updated_at\": \"2022-03-03T10:10:56.299255Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"MailChimp\",\n            \"status\": \"not_yet_available\",\n            \"short_description\": \"Mailchimp is an American marketing automation platform and email marketing service for managing mailing lists and creating email marketing campaigns to send to customers. Mailchimp is the trading name of its operator, Rocket Science Group, an American com\",\n            \"description\": \"Founder story\\r\\nAbout 20 years ago, Ben Chestnut and Dan Kurzius started a web design agency called the Rocket Science Group. Their focus was on big, corporate clients, but on the side, they created a delightful email marketing service for small businesses.\\r\\n\\r\\nMailchimp was designed as an alternative to the oversized, expensive email software of the early 2000s. It gave small business owners who lacked the high-end tools and resources of their larger competitors access to technology that empowered them and helped them grow.\",\n            \"instructions\": \"Founder story\\r\\nAbout 20 years ago, Ben Chestnut and Dan Kurzius started a web design agency called the Rocket Science Group. Their focus was on big, corporate clients, but on the side, they created a delightful email marketing service for small businesses.\\r\\n\\r\\nMailchimp was designed as an alternative to the oversized, expensive email software of the early 2000s. It gave small business owners who lacked the high-end tools and resources of their larger competitors access to technology that empowered them and helped them grow.\",\n            \"logo\": null,\n            \"cover_logo\": null,\n            \"url\": \"https://mailchimp.com/about/\",\n            \"terms_conditions_url\": \"https://mailchimp.com/about/\",\n            \"privacy_policy_url\": \"https://mailchimp.com/about/\",\n            \"categories\": [\n                \"assessment\"\n            ],\n            \"created_at\": \"2022-03-03T10:11:48.341766Z\",\n            \"updated_at\": \"2022-03-03T10:11:48.341789Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get integration",
+					"_postman_id": "00a3ba7c-75e2-4001-8b90-ca00a1bba6cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/integrations/{{integration_id}}/"
+					},
+					"response": [
+						{
+							"id": "3121d7a2-db66-4a05-a2bd-f27f6a916119",
+							"name": "Get integration",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/integrations/{{integration_id}}/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:56:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1599"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Codility\",\n    \"status\": \"active\",\n    \"short_description\": \"Codility is the #1 rated technical recruitment platform for teams to test the coding skills of developers and make evidence-based hiring decisions.\",\n    \"description\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n    \"instructions\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n    \"logo\": null,\n    \"cover_logo\": null,\n    \"url\": \"https://support.codility.com/\",\n    \"terms_conditions_url\": \"https://support.codility.com/\",\n    \"privacy_policy_url\": \"https://support.codility.com/\",\n    \"categories\": [\n        \"assessment\"\n    ],\n    \"created_at\": \"2022-03-03T10:10:56.299224Z\",\n    \"updated_at\": \"2022-03-03T10:10:56.299255Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Client integrations",
+					"_postman_id": "4891a903-3496-4ebb-ae32-b4c1df8777d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{manahub_url}}/v1/client-integrations/?category=assessment",
+							"host": [
+								"{{manahub_url}}"
+							],
+							"path": [
+								"v1",
+								"client-integrations",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "assessment"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "ba5fdf22-57da-4fad-9b43-add38b3f9f97",
+							"name": "Client integrations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:56:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1837"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 13,\n            \"authentication_type\": \"token\",\n            \"integration\": {\n                \"id\": 1,\n                \"name\": \"Codility\",\n                \"status\": \"active\",\n                \"short_description\": \"Codility is the #1 rated technical recruitment platform for teams to test the coding skills of developers and make evidence-based hiring decisions.\",\n                \"description\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n                \"instructions\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n                \"logo\": null,\n                \"cover_logo\": null,\n                \"url\": \"https://support.codility.com/\",\n                \"terms_conditions_url\": \"https://support.codility.com/\",\n                \"privacy_policy_url\": \"https://support.codility.com/\",\n                \"categories\": [\n                    \"assessment\"\n                ],\n                \"created_at\": \"2022-03-03T10:10:56.299224Z\",\n                \"updated_at\": \"2022-03-03T10:10:56.299255Z\"\n            },\n            \"status\": \"enabled\",\n            \"api_key\": \"xxxx-yyyy-zzzz\",\n            \"created_at\": \"2022-03-18T06:50:22.587605Z\",\n            \"updated_at\": \"2022-03-18T06:50:22.587625Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get client integration",
+					"_postman_id": "64fbc463-224a-467a-a8e4-3285637a3d68",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/"
+					},
+					"response": [
+						{
+							"id": "acfb595c-b199-4295-badd-0932b75f3c10",
+							"name": "Get client integration",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:33:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1785"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 13,\n    \"authentication_type\": \"token\",\n    \"integration\": {\n        \"id\": 1,\n        \"name\": \"Codility\",\n        \"status\": \"active\",\n        \"short_description\": \"Codility is the #1 rated technical recruitment platform for teams to test the coding skills of developers and make evidence-based hiring decisions.\",\n        \"description\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n        \"instructions\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n        \"logo\": null,\n        \"cover_logo\": null,\n        \"url\": \"https://support.codility.com/\",\n        \"terms_conditions_url\": \"https://support.codility.com/\",\n        \"privacy_policy_url\": \"https://support.codility.com/\",\n        \"categories\": [\n            \"assessment\"\n        ],\n        \"created_at\": \"2022-03-03T10:10:56.299224Z\",\n        \"updated_at\": \"2022-03-03T10:10:56.299255Z\"\n    },\n    \"status\": \"enabled\",\n    \"api_key\": \"xxxx-yyyy-zzzz\",\n    \"created_at\": \"2022-03-18T06:50:22.587605Z\",\n    \"updated_at\": \"2022-03-18T06:50:22.587625Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add client integration",
+					"_postman_id": "ae458603-97f8-423c-b4ae-d63f407e9243",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"integration_id\":5,\n    \"api_key\": \"efc26c8b02713c0389a766264fa563ad-us14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/"
+					},
+					"response": [
+						{
+							"id": "f321b48a-53c0-4689-b375-c08fd2420c78",
+							"name": "Already connected integration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"integration_id\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:56:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"integration_id\": [\n        \"Integration already connected\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get client integrations actions",
+					"_postman_id": "2dcd9014-2811-40cc-81b1-08940a0ee5c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"candidate_id_list\":[37438]}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/814/actions/share_candidate/"
+					},
+					"response": [
+						{
+							"id": "790090f8-eb49-4f05-acd8-51fd81781f73",
+							"name": "Assessment actions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/actions/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:57:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"action\": \"request_code_assessment\",\n        \"description\": \"Send a code assessment to a candidate\",\n        \"display\": \"Code assessment\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update client integration",
+					"_postman_id": "8ec9e8ad-7458-4bfd-a982-51dd932b7607",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"disabled_actions\": [\"share_candidate\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/814/"
+					},
+					"response": [
+						{
+							"id": "897275c7-e9de-4ed2-bdce-ad714a43e50a",
+							"name": "Update api key",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"api_key\": \"cc\",\n    \"status\": \"enabled\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/{{client_integration_id}}/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "gunicorn"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Mar 2022 08:57:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1773"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 13,\n    \"authentication_type\": \"token\",\n    \"integration\": {\n        \"id\": 1,\n        \"name\": \"Codility\",\n        \"status\": \"active\",\n        \"short_description\": \"Codility is the #1 rated technical recruitment platform for teams to test the coding skills of developers and make evidence-based hiring decisions.\",\n        \"description\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n        \"instructions\": \"Integrating your existing tech recruiting tools can help your team save a lot of time, improve the speed of information transfer from Recruiters to Hiring Managers and ensures your knowledge management is automatically working well for you.\\r\\nIf you haven't already, read our API Documentation so you can begin to understand how it works and take a look at the API itself and what it generates. \\r\\n\\r\\nOnce you know you want to create an integration, you'll first need to register your application with us to get your API token.\",\n        \"logo\": null,\n        \"cover_logo\": null,\n        \"url\": \"https://support.codility.com/\",\n        \"terms_conditions_url\": \"https://support.codility.com/\",\n        \"privacy_policy_url\": \"https://support.codility.com/\",\n        \"categories\": [\n            \"assessment\"\n        ],\n        \"created_at\": \"2022-03-03T10:10:56.299224Z\",\n        \"updated_at\": \"2022-03-03T10:10:56.299255Z\"\n    },\n    \"status\": \"enabled\",\n    \"api_key\": \"cc\",\n    \"created_at\": \"2022-03-18T06:50:22.587605Z\",\n    \"updated_at\": \"2022-03-18T08:57:21.186788Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get authorization URL",
+					"_postman_id": "d2f898fb-5dd6-44e5-a38b-2f8489e90155",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{manahub_url}}/v1/oauth/adobe/authorization-url/"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect User",
+					"_postman_id": "b835abc5-0cbe-4ffa-9e6a-96393777566a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token b347cb60f06aa031c3b39639cbccf62ea61deaf8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"authorization_code\": \"CBNCKBAAHBCAABAACbGC-IZJtSQJZ7VCB0dL8x3iZSehIs4N\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/v1/oauth/adobe/register/"
+					},
+					"response": []
+				},
+				{
+					"name": "disconnect user",
+					"_postman_id": "70b504a2-1e75-453d-a4ce-454e0349ed4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"authorization_code\": \"CBNCKBAAHBCAABAA1X8nm89g-JLo4fwVqj2rFYs1xiV0mSHJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/v1/oauth/adobe/register/"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "a6213cbf-ecb6-452d-8887-537dda9d4d8e"
+		},
+		{
+			"name": "E-Signature",
+			"item": [
+				{
+					"name": "List documents",
+					"_postman_id": "0b7c0ced-29b3-4833-966f-a4e9d0397541",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/{{e_sign_integration_id}}/actions/list_documents/"
+					},
+					"response": []
+				},
+				{
+					"name": "Preview Tags - Candidate",
+					"_postman_id": "91fa6ca8-d68b-413a-903f-c13503ff483d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"object\": \n        {\n            \"model\": \"candidate\",\n            \"id\": 930320\n        },\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{manahub_url}}/v1/client-integrations/{{e_sign_integration_id}}/actions/preview_tags/",
+							"host": [
+								"{{manahub_url}}"
+							],
+							"path": [
+								"v1",
+								"client-integrations",
+								"{{e_sign_integration_id}}",
+								"actions",
+								"preview_tags",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Preview Tags - Match",
+					"_postman_id": "faf45cb8-a508-43e7-8199-65a01d0e4e26",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"object\": {\n        \"model\": \"match\",\n        \"id\": 507187,\n        \"candidate_id\": 930320\n    },\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{manahub_url}}/v1/client-integrations/226/actions/preview_tags/",
+							"host": [
+								"{{manahub_url}}"
+							],
+							"path": [
+								"v1",
+								"client-integrations",
+								"226",
+								"actions",
+								"preview_tags",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Signature - Candidates",
+					"_postman_id": "07f6c280-bb8e-42e5-818a-2edea6aeb317",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							},
+							{
+								"key": "co",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"objects\": [\n        {\n            \"model\": \"candidate\",\n            \"id\": 930320\n        }\n    ],\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/226/actions/request_signature/"
+					},
+					"response": []
+				},
+				{
+					"name": "Request Signature - Matches",
+					"_postman_id": "fb894d10-4a76-4851-8067-0b1f33f23232",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							},
+							{
+								"key": "co",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"objects\": [\n        {\n            \"model\": \"match\",\n            \"id\": 507187,\n            \"candidate_id\": 930320\n        }\n    ],\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/226/actions/request_signature/"
+					},
+					"response": []
+				},
+				{
+					"name": "Request Signature - 1 Candidate",
+					"_postman_id": "96f434cf-30e4-462a-9cc8-b030901607e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							},
+							{
+								"key": "co",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"objects\": [\n        {\n            \"model\": \"candidate\",\n            \"id\": 930320\n        }\n    ],\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\",\n    \"form_fields_metadata\": [\n        {\n            \"field\": \"full_name\",\n            \"field_type\": \"text\",\n            \"value\": \"Candidate full name 123\",\n            \"required\": true,\n            \"name\": \"Candidate Name\"\n        },\n        {\n            \"field\": \"email\",\n            \"field_type\": \"text\",\n            \"value\": \"robin.bonnin@gmail.com\",\n            \"required\": true,\n            \"name\": \"Candidate Email Address\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/client-integrations/226/actions/request_signature/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Signature Request (webhook GET)",
+					"_postman_id": "33c50c02-0df4-4135-b067-81041eed82b0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token b347cb60f06aa031c3b39639cbccf62ea61deaf8",
+								"type": "default"
+							},
+							{
+								"key": "X-AdobeSign-ClientId.",
+								"value": "sabun",
+								"type": "default"
+							}
+						],
+						"url": "{{manahub_url}}/v1/client-integrations/{{e_sign_integration_id}}/webhooks/update_signature_request/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Signature Request",
+					"_postman_id": "15489910-209a-4232-befb-7fa2261f0b46",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token b347cb60f06aa031c3b39639cbccf62ea61deaf8",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "X-AdobeSign-ClientId",
+								"value": "sabun",
+								"type": "default"
+							}
+						],
+						"url": "{{manahub_url}}/v1/client-integrations/{{e_sign_integration_id}}/webhooks/update_signature_request/"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "acacc83e-603a-4859-896a-96de4d5b481c"
+		},
+		{
+			"name": "Oauth",
+			"item": [
+				{
+					"name": "Authorization url",
+					"_postman_id": "967064c2-1507-4c85-8869-5d6d38360b21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{manahub_url}}/v1/oauth/adobe_sign/authorization-url/"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"_postman_id": "859d6a97-a598-4139-9936-c7b080b588aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"authorization_code\": \"CBNCKBAAHBCAABAARN3L6IYLIPBdkIMFmctpkghg0KnIA_WC\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{manahub_url}}/v1/oauth/adobe_sign/register/"
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"_postman_id": "b7746879-0114-48b3-86cd-6d0977b36236",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token {{manatal_id_token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{manahub_url}}/v1/oauth/adobe_sign/disconnect/"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "7da84f7b-ef8c-463b-b37e-0f8fdd89787b"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4700d979-891a-48fb-81a8-4a22f561fb28",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5a129655-adeb-4c57-a9bb-052ce12989ad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5d7f6f99-2fb0-485c-bc80-2f858cc532f3",
+			"key": "assessment_integration_id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"id": "95444abe-1849-45e2-95fb-cfae2a219f9f",
+			"key": "e_sign_integration_id",
+			"value": "231\t",
+			"type": "string"
+		},
+		{
+			"id": "6a202c68-ef19-4c43-acbe-ddcfea648a6d",
+			"key": "emailing_integration_id",
+			"value": "30",
+			"type": "string"
+		}
+	]
+}
