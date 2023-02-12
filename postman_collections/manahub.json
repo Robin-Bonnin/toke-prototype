@@ -11,7 +11,7 @@
 			"item": [
 				{
 					"name": "list assessment",
-					"_postman_id": "b1bb6699-20f7-4f3e-8214-f64b2a342bca",
+					"id": "b1bb6699-20f7-4f3e-8214-f64b2a342bca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -102,7 +102,7 @@
 				},
 				{
 					"name": "assessment request",
-					"_postman_id": "805a8949-53fb-4788-805b-7fc0137f787c",
+					"id": "805a8949-53fb-4788-805b-7fc0137f787c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -211,7 +211,7 @@
 				},
 				{
 					"name": "Get job assessment results",
-					"_postman_id": "679aa79c-ca4c-4edd-a3f9-83887674ca8f",
+					"id": "679aa79c-ca4c-4edd-a3f9-83887674ca8f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -314,7 +314,7 @@
 				},
 				{
 					"name": "Save assessment result",
-					"_postman_id": "2b1acfe5-06c8-496e-b250-2f99fbe45248",
+					"id": "2b1acfe5-06c8-496e-b250-2f99fbe45248",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -424,7 +424,7 @@
 				},
 				{
 					"name": "Get candidate assessment results",
-					"_postman_id": "1570d172-cf15-4069-8dc6-9c0a551cdbc0",
+					"id": "1570d172-cf15-4069-8dc6-9c0a551cdbc0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -546,7 +546,7 @@
 				},
 				{
 					"name": "Get job filter for candidate",
-					"_postman_id": "423ed7b9-ea13-4686-896f-90b32225342c",
+					"id": "423ed7b9-ea13-4686-896f-90b32225342c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -630,7 +630,7 @@
 				},
 				{
 					"name": "Get candidate filter for job",
-					"_postman_id": "a3293b4e-ec5e-40eb-8cfa-5672abf13fbd",
+					"id": "a3293b4e-ec5e-40eb-8cfa-5672abf13fbd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -713,7 +713,7 @@
 					]
 				}
 			],
-			"_postman_id": "ead0aa66-fea7-4da9-a4b2-1bc726256da5"
+			"id": "ead0aa66-fea7-4da9-a4b2-1bc726256da5"
 		},
 		{
 			"name": "Emailing",
@@ -723,7 +723,7 @@
 					"item": [
 						{
 							"name": "Webhook test",
-							"_postman_id": "c77b01b6-7779-41c4-b006-bc0bf876d786",
+							"id": "c77b01b6-7779-41c4-b006-bc0bf876d786",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -741,12 +741,11 @@
 							"response": []
 						}
 					],
-					"_postman_id": "2d0382ac-525c-482b-b248-90c20847e278",
-					"_postman_isSubFolder": true
+					"id": "2d0382ac-525c-482b-b248-90c20847e278"
 				},
 				{
 					"name": "list contact lists",
-					"_postman_id": "252d45e9-e8c5-4f84-a224-36603500acd1",
+					"id": "252d45e9-e8c5-4f84-a224-36603500acd1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -825,7 +824,7 @@
 				},
 				{
 					"name": "Add contacts to list and create list",
-					"_postman_id": "90f8c5a5-2369-44d6-b5af-36e83a10946a",
+					"id": "90f8c5a5-2369-44d6-b5af-36e83a10946a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -850,74 +849,6 @@
 						"url": "{{manahub_url}}/v1/client-integrations/{{emailing_integration_id}}/actions/add_contacts_to_list/"
 					},
 					"response": [
-						{
-							"id": "47e74d72-33e0-483d-bcb8-c65d82b64cc3",
-							"name": "Creation successful",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Token {{manatal_id_token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"new_list_name\": \"faw\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n        {\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"new_list_defaults_from_name\": \"robin\",\n    \"new_list_defaults_from_email\": \"robin.bonnin@gmail.com\",\n    \"new_list_name_contact_zip\": \"234235\",\n    \"new_list_name_contact_state\": \"NY\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{manahub_url}}/v1/client-integrations/30/actions/add_contacts_to_list/"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Tue, 31 May 2022 12:57:06 GMT"
-								},
-								{
-									"key": "Server",
-									"value": "WSGIServer/0.2 CPython/3.10.2+"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept"
-								},
-								{
-									"key": "Allow",
-									"value": "POST, OPTIONS"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "DENY"
-								},
-								{
-									"key": "Content-Length",
-									"value": "47"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "same-origin"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"id\": \"e0a9c886ca\",\n    \"name\": \"faw\",\n    \"nb_members\": 0\n}"
-						},
 						{
 							"id": "91093141-68cf-41fa-ad05-fe6109a78dd5",
 							"name": "API error",
@@ -985,12 +916,80 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"Mailchimp Error\": [\n        \"No permission to perform this action.\\nPossible issues:\\n- Please, check if you have hit your audience limits in Mailchimp.https://us10.admin.mailchimp.com/lists/\"\n    ]\n}"
+						},
+						{
+							"id": "47e74d72-33e0-483d-bcb8-c65d82b64cc3",
+							"name": "Creation successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token {{manatal_id_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"new_list_name\": \"faw\",\n    \"new_members\": [\n        {\n            \"email\": \"{{$randomEmail}}\",\n            \"full_name\": \"{{$randomFullName}}\"\n        },\n        {\n            \"full_name\": \"{{$randomFullName}}\"\n        }\n    ],\n    \"new_list_defaults_from_name\": \"robin\",\n    \"new_list_defaults_from_email\": \"robin.bonnin@gmail.com\",\n    \"new_list_name_contact_zip\": \"234235\",\n    \"new_list_name_contact_state\": \"NY\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{manahub_url}}/v1/client-integrations/30/actions/add_contacts_to_list/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 31 May 2022 12:57:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.2+"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"e0a9c886ca\",\n    \"name\": \"faw\",\n    \"nb_members\": 0\n}"
 						}
 					]
 				},
 				{
 					"name": "Add contacts to list",
-					"_postman_id": "522cdfea-8efc-420f-9d4f-b9ecec9dd5d0",
+					"id": "522cdfea-8efc-420f-9d4f-b9ecec9dd5d0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1087,7 +1086,7 @@
 				},
 				{
 					"name": "Get extra fields",
-					"_postman_id": "79288c8b-7f4c-4ab6-9d52-a0f82dcca909",
+					"id": "79288c8b-7f4c-4ab6-9d52-a0f82dcca909",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1183,14 +1182,14 @@
 					]
 				}
 			],
-			"_postman_id": "ee93ca2a-4c52-43c7-b925-00643e70c285"
+			"id": "ee93ca2a-4c52-43c7-b925-00643e70c285"
 		},
 		{
 			"name": "Integration management",
 			"item": [
 				{
 					"name": "Integrations categories",
-					"_postman_id": "eb1c4f24-0468-41b2-b175-911948f8528c",
+					"id": "eb1c4f24-0468-41b2-b175-911948f8528c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1273,7 +1272,7 @@
 				},
 				{
 					"name": "Integrations",
-					"_postman_id": "b089842c-abc0-48f2-87d3-046863fb3a7e",
+					"id": "b089842c-abc0-48f2-87d3-046863fb3a7e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1364,7 +1363,7 @@
 				},
 				{
 					"name": "Get integration",
-					"_postman_id": "00a3ba7c-75e2-4001-8b90-ca00a1bba6cc",
+					"id": "00a3ba7c-75e2-4001-8b90-ca00a1bba6cc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1455,7 +1454,7 @@
 				},
 				{
 					"name": "Client integrations",
-					"_postman_id": "4891a903-3496-4ebb-ae32-b4c1df8777d4",
+					"id": "4891a903-3496-4ebb-ae32-b4c1df8777d4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1562,7 +1561,7 @@
 				},
 				{
 					"name": "Get client integration",
-					"_postman_id": "64fbc463-224a-467a-a8e4-3285637a3d68",
+					"id": "64fbc463-224a-467a-a8e4-3285637a3d68",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1653,7 +1652,7 @@
 				},
 				{
 					"name": "Add client integration",
-					"_postman_id": "ae458603-97f8-423c-b4ae-d63f407e9243",
+					"id": "ae458603-97f8-423c-b4ae-d63f407e9243",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1762,7 +1761,7 @@
 				},
 				{
 					"name": "Get client integrations actions",
-					"_postman_id": "2dcd9014-2811-40cc-81b1-08940a0ee5c4",
+					"id": "2dcd9014-2811-40cc-81b1-08940a0ee5c4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1862,7 +1861,7 @@
 				},
 				{
 					"name": "update client integration",
-					"_postman_id": "8ec9e8ad-7458-4bfd-a982-51dd932b7607",
+					"id": "8ec9e8ad-7458-4bfd-a982-51dd932b7607",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1971,7 +1970,7 @@
 				},
 				{
 					"name": "get authorization URL",
-					"_postman_id": "d2f898fb-5dd6-44e5-a38b-2f8489e90155",
+					"id": "d2f898fb-5dd6-44e5-a38b-2f8489e90155",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1990,7 +1989,7 @@
 				},
 				{
 					"name": "Connect User",
-					"_postman_id": "b835abc5-0cbe-4ffa-9e6a-96393777566a",
+					"id": "b835abc5-0cbe-4ffa-9e6a-96393777566a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2018,7 +2017,7 @@
 				},
 				{
 					"name": "disconnect user",
-					"_postman_id": "70b504a2-1e75-453d-a4ce-454e0349ed4f",
+					"id": "70b504a2-1e75-453d-a4ce-454e0349ed4f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2039,14 +2038,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "a6213cbf-ecb6-452d-8887-537dda9d4d8e"
+			"id": "a6213cbf-ecb6-452d-8887-537dda9d4d8e"
 		},
 		{
 			"name": "E-Signature",
 			"item": [
 				{
 					"name": "List documents",
-					"_postman_id": "0b7c0ced-29b3-4833-966f-a4e9d0397541",
+					"id": "0b7c0ced-29b3-4833-966f-a4e9d0397541",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2061,10 +2060,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "{{manahub_url}}/v1/client-integrations/{{e_sign_integration_id}}/actions/list_documents/"
 					},
@@ -2072,7 +2068,7 @@
 				},
 				{
 					"name": "Preview Tags - Candidate",
-					"_postman_id": "91fa6ca8-d68b-413a-903f-c13503ff483d",
+					"id": "91fa6ca8-d68b-413a-903f-c13503ff483d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2120,7 +2116,7 @@
 				},
 				{
 					"name": "Preview Tags - Match",
-					"_postman_id": "faf45cb8-a508-43e7-8199-65a01d0e4e26",
+					"id": "faf45cb8-a508-43e7-8199-65a01d0e4e26",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2135,7 +2131,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"object\": {\n        \"model\": \"match\",\n        \"id\": 507187,\n        \"candidate_id\": 930320\n    },\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\",\n}",
+							"raw": "{\n    \"object\": {\n        \"model\": \"match\",\n        \"id\": 111,\n        \"candidate_id\": 930320\n    },\n    \"external_document_id\": \"CBJCHBCAABAA9D_SqLBK59GetdvHXMUeSelw_4nQ0DY0\",\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2168,7 +2164,7 @@
 				},
 				{
 					"name": "Request Signature - Candidates",
-					"_postman_id": "07f6c280-bb8e-42e5-818a-2edea6aeb317",
+					"id": "07f6c280-bb8e-42e5-818a-2edea6aeb317",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2202,7 +2198,7 @@
 				},
 				{
 					"name": "Request Signature - Matches",
-					"_postman_id": "fb894d10-4a76-4851-8067-0b1f33f23232",
+					"id": "fb894d10-4a76-4851-8067-0b1f33f23232",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2236,7 +2232,7 @@
 				},
 				{
 					"name": "Request Signature - 1 Candidate",
-					"_postman_id": "96f434cf-30e4-462a-9cc8-b030901607e4",
+					"id": "96f434cf-30e4-462a-9cc8-b030901607e4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2270,7 +2266,7 @@
 				},
 				{
 					"name": "Update Signature Request (webhook GET)",
-					"_postman_id": "33c50c02-0df4-4135-b067-81041eed82b0",
+					"id": "33c50c02-0df4-4135-b067-81041eed82b0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2294,7 +2290,7 @@
 				},
 				{
 					"name": "Update Signature Request",
-					"_postman_id": "15489910-209a-4232-befb-7fa2261f0b46",
+					"id": "15489910-209a-4232-befb-7fa2261f0b46",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2318,14 +2314,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "acacc83e-603a-4859-896a-96de4d5b481c"
+			"id": "acacc83e-603a-4859-896a-96de4d5b481c"
 		},
 		{
 			"name": "Oauth",
 			"item": [
 				{
 					"name": "Authorization url",
-					"_postman_id": "967064c2-1507-4c85-8869-5d6d38360b21",
+					"id": "967064c2-1507-4c85-8869-5d6d38360b21",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2340,10 +2336,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "{{manahub_url}}/v1/oauth/adobe_sign/authorization-url/"
 					},
@@ -2351,7 +2344,7 @@
 				},
 				{
 					"name": "Connect",
-					"_postman_id": "859d6a97-a598-4139-9936-c7b080b588aa",
+					"id": "859d6a97-a598-4139-9936-c7b080b588aa",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2379,7 +2372,7 @@
 				},
 				{
 					"name": "Disconnect",
-					"_postman_id": "b7746879-0114-48b3-86cd-6d0977b36236",
+					"id": "b7746879-0114-48b3-86cd-6d0977b36236",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2394,17 +2387,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "{{manahub_url}}/v1/oauth/adobe_sign/disconnect/"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "7da84f7b-ef8c-463b-b37e-0f8fdd89787b"
+			"id": "7da84f7b-ef8c-463b-b37e-0f8fdd89787b"
 		}
 	],
 	"event": [
@@ -2431,22 +2421,19 @@
 	],
 	"variable": [
 		{
-			"id": "5d7f6f99-2fb0-485c-bc80-2f858cc532f3",
+			"id": "c8338307-0e5a-4b9a-baf3-4a5459114d53",
 			"key": "assessment_integration_id",
-			"value": "1",
-			"type": "string"
+			"value": "1"
 		},
 		{
-			"id": "95444abe-1849-45e2-95fb-cfae2a219f9f",
+			"id": "1fc1b85b-71cc-48fc-ba20-c73d91aa6223",
 			"key": "e_sign_integration_id",
-			"value": "231\t",
-			"type": "string"
+			"value": "231\t"
 		},
 		{
-			"id": "6a202c68-ef19-4c43-acbe-ddcfea648a6d",
+			"id": "daa591dd-612b-435d-8c79-5bc85faa93df",
 			"key": "emailing_integration_id",
-			"value": "30",
-			"type": "string"
+			"value": "30"
 		}
 	]
 }
